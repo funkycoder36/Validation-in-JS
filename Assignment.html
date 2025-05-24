@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            h1 {
+                color:blue;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            
+            p {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to some random website</h1>
+        <p>Please fill the form below</p>
+
+        <form name="theform" onsumbit="validateForm();">
+            
+            Name: <input type="text" name="fname">
+            Age:<input id="id1" type="number" min="18">
+            <input type="sumbit" value="login">
+            <p id="no name"></p>
+        </form>
+        <script>
+            function validateForm()  {
+                var x = document.forms["theform"]["fname"].value;
+                var y = document.forms["theform"]["id1"].value;
+                if (x == "" || y == "") {
+                    alert("The form MUST be filled");
+                    return false;
+                }
+                else
+                alert("U got in")
+                
+            }
+        </script>
+    </body>
+</html>
